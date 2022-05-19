@@ -1,31 +1,31 @@
 # VKmini
 
-Здравствуйте! Рад представить прототип приложения, для работы в социальной сети «ВКонтакте». В нем доступен просмотр групп, друзей и их фотографий из альбома.
+Hello! I am glad to present a prototype of an application for working in the VKontakte social network. It is available to view groups, friends and their photos from the album.
 
-## Реализованный функционал:
+## Implemented functionality:
 
-### Загрузочный экран
-+ Создан загрузочный экран.
+### Load screen
++ A loading screen has been created.
     + ![loadScreen](https://github.com/KovalMark/ScreenshotApp/blob/master/VKmini/Splash.png)
 
-### Экран авторизации
-+ Разработан экран авторизации от VK API.
+### Authorisation screen
++ The authorisation screen from VK API has been developed.
     + ![loadScreen](https://github.com/KovalMark/ScreenshotApp/blob/master/VKmini/webView.png)
 
-### Экран со списком друзей
-+ Создан экран, отображающий список друзей пользователя.
-+ Разработана кастомная View для фото пользователя.
-+ Добавлена анимация нажатия на аватарку пользователя.
+### Friends list screen
++ A screen has been created that displays a list of the user's friends.
++ A custom View for the user's photo has been developed.
++ Added animation of clicking on the user's avatar.
     + ![loadScreen](https://github.com/KovalMark/ScreenshotApp/blob/master/VKmini/Friend.png)
 
-### Экран с фотографиями друзей
-+ Разработан экран с кастомной view для отображения фотографий друзей из альбома.
-+ Создан контрол «Мне нравится», с помощью которого можно поставить лайк под фотографией пользователя.
-+ Подготовлена анимация контрола «Мне нравится».
+### Screen with photos of friends
++ A custom view screen has been developed to display photos of friends from the album.
++ A "Like" control has been created, with which you can put a like under the user's photo.
++ Animation of the "I like" control has been prepared.
     + ![loadScreen](https://github.com/KovalMark/ScreenshotApp/blob/master/VKmini/PhotoFriend.png)
 
-### Экран со списком групп
-+ Создан экран, отображающий список групп пользователя.
-+ Разработана кастомная View для фото группы.
-+ Добавлена анимация нажатия на аватарку группы.
+### A screen with a list of groups
++ A screen has been created that displays a list of user groups.
++ A custom View for the group photo has been developed.
++ Added animation of clicking on the avatar of the group.
     + ![loadScreen](https://github.com/KovalMark/ScreenshotApp/blob/master/VKmini/Group.png)
