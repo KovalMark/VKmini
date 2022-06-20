@@ -1,6 +1,6 @@
 # VKmini
 
-Hello! I am glad to present a prototype of an application for working in the VK social network. It is available to view groups, friends and their photos from the album.
+Hello! I am glad to present a prototype of an application for working in the VK social network. It is available to view news feed, groups, friends and their photos from the album.
 
 ## Implemented functionality:
 
