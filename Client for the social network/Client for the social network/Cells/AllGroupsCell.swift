@@ -3,17 +3,13 @@ import UIKit
 class AllGroupsCell: UITableViewCell {
     
     @IBOutlet weak var Shadow: UIView!
-    
     @IBOutlet weak var labelAllGroups: UILabel!
-    
     @IBOutlet weak var ImageAllGroups: UIImageView!
-    
-    var shadowColor = #colorLiteral(red: 1, green: 0.9959130883, blue: 1, alpha: 1)
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        Shadow.layer.shadowColor = shadowColor.cgColor
+        Shadow.layer.shadowColor = #colorLiteral(red: 1, green: 0.9959130883, blue: 1, alpha: 1)
         Shadow.layer.shadowOffset = .zero
         Shadow.layer.shadowRadius = 15
         Shadow.layer.shadowOpacity = 0.4

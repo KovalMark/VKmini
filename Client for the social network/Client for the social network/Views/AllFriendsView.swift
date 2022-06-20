@@ -5,13 +5,10 @@ class AllFriendsView: UIView {
     @IBOutlet var shadowView: UIView!
     @IBOutlet var avatarImageView: UIImageView!
     
-    var shadowColor = #colorLiteral(red: 1, green: 0.9959130883, blue: 1, alpha: 1)
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        shadowView.layer.shadowColor = shadowColor.cgColor
+        shadowView.layer.shadowColor = #colorLiteral(red: 1, green: 0.9959130883, blue: 1, alpha: 1)
         shadowView.layer.shadowOffset = .zero
         shadowView.layer.shadowRadius = 15
         shadowView.layer.shadowOpacity = 0.4

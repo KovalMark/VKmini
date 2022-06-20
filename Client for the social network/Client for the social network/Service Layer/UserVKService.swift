@@ -36,7 +36,7 @@ final class UserVKService {
         
         AF.request(url, method: .get, parameters: methodName).responseData { [ weak self ] response in
             guard let data = response.value else { return }
-            let userArray = try! JSONDecoder().decode(UserVKResponse.self, from: data)
+            guard let userArray = try? JSONDecoder().decode(UserVKResponse.self, from: data) else { return }
             self?.saveFriendData(userArray.response.items)
             completion(userArray.response.items)
         }

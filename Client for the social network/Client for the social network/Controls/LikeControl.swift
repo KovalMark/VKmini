@@ -4,7 +4,7 @@ class LikeControl: UIControl {
     
     @IBOutlet var likeImage: UIImageView!
     
-    var islike: Bool = false
+    var isLike: Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()

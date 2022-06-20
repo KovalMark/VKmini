@@ -3,22 +3,20 @@ import UIKit
 class FriendsPhotosCell: UICollectionViewCell {
     
     @IBOutlet weak var friendsPhotos: UIImageView!
-    
     @IBOutlet var likeControl: LikeControl!
-    
     @IBOutlet var container: UIView!
     
     override func awakeFromNib() {
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(hadleTap))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(headTap))
         tap.numberOfTapsRequired = 2
         container.addGestureRecognizer(tap)
     }
     
-    @objc func hadleTap(_ :UITapGestureRecognizer) {
-        likeControl.islike.toggle()
+    @objc func headTap(_ :UITapGestureRecognizer) {
+        likeControl.isLike.toggle()
         
-        if likeControl.islike {
+        if likeControl.isLike {
             UIView.transition(with: likeControl,
                               duration: 0.3,
                               options: .transitionCurlUp) {

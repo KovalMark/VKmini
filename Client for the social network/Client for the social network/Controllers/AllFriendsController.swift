@@ -14,7 +14,6 @@ class AllFriendsController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        createNotificationToken()
         loadFriendDataRealm()
     }
     
@@ -30,7 +29,7 @@ class AllFriendsController: UITableViewController {
         
         cell.labelAllFriendsCell.text = friends.firstName
         cell.secondLabelAllFriendsCell.text = friends.lastName
-        cell.imageAllFriendsCell.loadImage(with: friends.photo)
+        cell.imageAllFriendsCell.loadImageCache(friends.photo)
         
         return cell
     }
@@ -39,7 +38,7 @@ class AllFriendsController: UITableViewController {
         if segue.destination is FriendsPhotosController{
             guard let friendsPhotosVC = segue.destination as? FriendsPhotosController else { return }
             guard
-                let indexPathSection = tableView.indexPathForSelectedRow?.section,
+//                let indexPathSection = tableView.indexPathForSelectedRow?.section,
                 let indexPathRow = tableView.indexPathForSelectedRow?.row
             else {
                 return
@@ -63,33 +62,6 @@ class AllFriendsController: UITableViewController {
         friendsVK.friendAdd { [weak self] friend in
             self?.loadFriendData()
             self?.tableView?.reloadData()
-        }
-    }
-    
-    func createNotificationToken() {
-        notificationToken = friendResponse?.observe { [ weak self ] result in
-            guard let self = self else { return }
-            switch result {
-            case .initial(let groupsData):
-                print("\(groupsData.count)")
-            case .update(let groups,
-                         deletions: let deletions,
-                         insertions: let insertions,
-                         modifications: let modifications):
-                let deletionsIndexPath = deletions.map { IndexPath(row: $0, section: 0) }
-                let insertionsIndexPath = insertions.map { IndexPath(row: $0, section: 0) }
-                let modificationsIndexPath = modifications.map { IndexPath(row: $0, section: 0) }
-                
-                DispatchQueue.main.async {
-                    self.tableView.beginUpdates()
-                    self.tableView.deleteRows(at: deletionsIndexPath, with: .automatic)
-                    self.tableView.insertRows(at: insertionsIndexPath, with: .automatic)
-                    self.tableView.reloadRows(at: modificationsIndexPath, with: .automatic)
-                    self.tableView.endUpdates()
-                }
-            case .error(let error):
-                print("\(error)")
-            }
         }
     }
 }

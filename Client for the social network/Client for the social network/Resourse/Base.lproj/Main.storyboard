@@ -51,7 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hV-bu-jDZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2258" y="-1855"/>
+            <point key="canvasLocation" x="2257" y="-1886"/>
         </scene>
         <!--LoginVK Controller-->
         <scene sceneID="c5V-DA-icd">
@@ -70,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="04t-oa-AlQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3012" y="-1855"/>
+            <point key="canvasLocation" x="3022" y="-1885"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="X9k-vl-HAm">
@@ -90,13 +90,55 @@
                         </tabBarAppearance>
                     </tabBar>
                     <connections>
+                        <segue destination="yDM-Sa-wng" kind="relationship" relationship="viewControllers" id="NqK-QD-4a4"/>
                         <segue destination="7d6-hI-yXr" kind="relationship" relationship="viewControllers" id="LVa-3y-Z9p"/>
                         <segue destination="Vm2-6t-jKQ" kind="relationship" relationship="viewControllers" id="DvE-so-vSh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cs0-Sz-ebI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3012" y="-1105"/>
+            <point key="canvasLocation" x="3022" y="-1076"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="yHB-b4-UTd">
+            <objects>
+                <viewController storyboardIdentifier="NewsController" modalPresentationStyle="fullScreen" id="yDM-Sa-wng" customClass="NewsController" customModule="VKmini" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wsc-Vg-ONd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="lbm-E7-2TH">
+                                <rect key="frame" x="0.0" y="336" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RZT-pJ-ot1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
+                                <color key="backgroundColor" red="0.109803915" green="0.11372549830000001" blue="0.11372549830000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="separatorColor" red="0.270588249" green="0.27450981740000002" blue="0.2823529541" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ufc-U5-Tzr"/>
+                        <color key="backgroundColor" red="0.109803915" green="0.11372549830000001" blue="0.11372549830000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ufc-U5-Tzr" firstAttribute="bottom" secondItem="RZT-pJ-ot1" secondAttribute="bottom" id="EmV-QN-Sn8"/>
+                            <constraint firstItem="RZT-pJ-ot1" firstAttribute="leading" secondItem="ufc-U5-Tzr" secondAttribute="leading" id="mwg-Zl-vR1"/>
+                            <constraint firstItem="ufc-U5-Tzr" firstAttribute="trailing" secondItem="RZT-pJ-ot1" secondAttribute="trailing" id="xv6-GV-JjP"/>
+                            <constraint firstItem="RZT-pJ-ot1" firstAttribute="top" secondItem="ufc-U5-Tzr" secondAttribute="top" id="ztv-aR-yZF"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="News" id="8NW-aN-xsJ">
+                        <imageReference key="image" image="newspaper" catalog="system" symbolScale="large"/>
+                        <imageReference key="selectedImage" image="newspaper.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="lbm-E7-2TH" id="2pG-2d-jRV"/>
+                        <outlet property="newsTableView" destination="RZT-pJ-ot1" id="elJ-0N-zhl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q2u-jC-Gnh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1748" y="-289"/>
         </scene>
         <!--Friends-->
         <scene sceneID="vK7-RF-uhD">
@@ -123,7 +165,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uyp-C1-JcS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2258" y="-350"/>
+            <point key="canvasLocation" x="3022" y="-289"/>
         </scene>
         <!--All Friends Controller-->
         <scene sceneID="FaQ-k9-3Sw">
@@ -223,7 +265,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kkT-EJ-Mn9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2258" y="435"/>
+            <point key="canvasLocation" x="3022" y="532"/>
         </scene>
         <!--Friends Photos Controller-->
         <scene sceneID="ptp-1U-OtK">
@@ -251,7 +293,7 @@
                                             <rect key="frame" x="10" y="10" width="108" height="108"/>
                                             <color key="tintColor" red="1" green="0.99607843159999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="108" id="5rh-iD-puQ"/>
+                                                <constraint firstAttribute="height" priority="250" constant="108" id="5rh-iD-puQ"/>
                                                 <constraint firstAttribute="width" secondItem="6ek-Vx-YWY" secondAttribute="height" multiplier="1:1" id="EW0-Nn-cmw"/>
                                             </constraints>
                                         </imageView>
@@ -283,7 +325,7 @@
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="6ek-Vx-YWY" secondAttribute="bottom" multiplier="1:1" constant="10" id="9qM-5y-Zg7"/>
+                                        <constraint firstAttribute="bottom" secondItem="6ek-Vx-YWY" secondAttribute="bottom" multiplier="1:1" priority="250" constant="10" id="9qM-5y-Zg7"/>
                                         <constraint firstAttribute="trailing" secondItem="CXd-t1-r6y" secondAttribute="trailing" constant="8" id="QEd-vs-5Eb"/>
                                         <constraint firstAttribute="bottom" secondItem="CXd-t1-r6y" secondAttribute="bottom" constant="8" id="j0u-jl-NeK"/>
                                         <constraint firstItem="6ek-Vx-YWY" firstAttribute="leading" secondItem="ugS-47-1GD" secondAttribute="leading" multiplier="1:1" constant="10" id="kSh-j3-1Td"/>
@@ -309,7 +351,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wXP-b1-pCl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2258" y="1204"/>
+            <point key="canvasLocation" x="3022" y="1301"/>
         </scene>
         <!--Groups-->
         <scene sceneID="7bu-xP-ffV">
@@ -333,7 +375,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ngh-SN-WpH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3778" y="-349"/>
+            <point key="canvasLocation" x="4501" y="-289"/>
         </scene>
         <!--All Groups Controller-->
         <scene sceneID="Vlo-uz-or9">
@@ -405,12 +447,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1q7-O0-Dr3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="jbS-j7-cgo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3777" y="436"/>
+            <point key="canvasLocation" x="4501" y="532"/>
         </scene>
     </scenes>
     <color key="tintColor" red="1" green="0.99607843159999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
         <image name="emptylike" width="499" height="500"/>
+        <image name="newspaper" catalog="system" width="128" height="111"/>
+        <image name="newspaper.fill" catalog="system" width="128" height="111"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
